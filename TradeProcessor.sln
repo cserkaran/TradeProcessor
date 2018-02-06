@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeProcessor.Rules", "Tra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeProcessor.Bll", "TradeProcessor.Bll\TradeProcessor.Bll.csproj", "{1514FC0A-D28D-490A-A77D-8EE1A57DF90C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8EE10A4D-ABE0-4CAD-BBF4-00A8998CD022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeProcessor.Tests", "TradeProcessor.Tests\TradeProcessor.Tests.csproj", "{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{1514FC0A-D28D-490A-A77D-8EE1A57DF90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1514FC0A-D28D-490A-A77D-8EE1A57DF90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1514FC0A-D28D-490A-A77D-8EE1A57DF90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,7 @@ Global
 		{B820A0E6-93AB-48E8-A088-DF2C8404CA18} = {4A8532DF-6D23-4858-928C-EBC38388F82D}
 		{E29099AB-D306-47ED-9DF9-21361CA08016} = {4A8532DF-6D23-4858-928C-EBC38388F82D}
 		{1514FC0A-D28D-490A-A77D-8EE1A57DF90C} = {4A8532DF-6D23-4858-928C-EBC38388F82D}
+		{3E9FD6FC-C16C-401E-8091-AC0440BA1C3B} = {8EE10A4D-ABE0-4CAD-BBF4-00A8998CD022}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25458A27-CD69-479B-A0D3-CAD2B2222352}
