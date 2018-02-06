@@ -7,10 +7,10 @@ using TradeProcessor.Interfaces.Extensibility;
 
 namespace TradeProcessor.Infrastructure
 {
-    public class ExtensionRepository
+    public class ExtensionRepositoryLoader
     {
-        private static readonly Lazy<ExtensionRepository> LazyInstance =
-            new Lazy<ExtensionRepository>(() => new ExtensionRepository());
+        private static readonly Lazy<ExtensionRepositoryLoader> LazyInstance =
+            new Lazy<ExtensionRepositoryLoader>(() => new ExtensionRepositoryLoader());
 
         /// <summary>
         /// Property used for MEF imports
@@ -27,14 +27,14 @@ namespace TradeProcessor.Infrastructure
         /// <summary>
         /// Private constructor for singleton pattern
         /// </summary>
-        private ExtensionRepository()
+        private ExtensionRepositoryLoader()
         {
         }
 
         /// <summary>
         /// Gets an instance of the extension repository
         /// </summary>
-        public static ExtensionRepository Instance
+        public static ExtensionRepositoryLoader Instance
         {
             get
             {
@@ -76,7 +76,7 @@ namespace TradeProcessor.Infrastructure
         {
             if (this.Parts != null)
             {
-                return this.Parts.OfType<T>().FirstOrDefault();
+                return Parts.OfType<T>().FirstOrDefault();
             }
 
             return default(T);

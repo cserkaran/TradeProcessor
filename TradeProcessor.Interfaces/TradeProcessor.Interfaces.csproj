@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensibility\ILoggingExtension.cs" />
+    <Compile Include="Extensibility\IDbRepositoryExtension.cs" />
+    <Compile Include="Extensibility\IExtension.cs" />
+    <Compile Include="Extensibility\IExtensionProvider.cs" />
     <Compile Include="Extensibility\IExtensionRepository.cs" />
+    <Compile Include="Extensibility\IExtensionMetadata.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="IDbRepository.cs" />
     <Compile Include="ITradeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,5 +57,6 @@
       <Name>TradeProcessor.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

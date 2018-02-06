@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TradeProcessor.TextLogger")]
+[assembly: AssemblyTitle("TradeProcessor.ConsoleApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TradeProcessor.TextLogger")]
+[assembly: AssemblyProduct("TradeProcessor.ConsoleApp")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cbf8e9fa-b19f-4953-bb17-ea1f5720d3af")]
+[assembly: Guid("b820a0e6-93ab-48e8-a088-df2c8404ca18")]
 
 // Version information for an assembly consists of the following four values:
 //

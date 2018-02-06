@@ -8,6 +8,11 @@ namespace TradeProcessor.Repository
 {
     public class TradeRepository : ITradeRepository
     {
+        public void Initialize()
+        {
+            // Initiliaze repository here.. e.g create DB Pool etc..;
+        }
+
         public void CreateTradeRecords(IEnumerable<TradeRecord> trades)
         {
             using (var connection = new SqlConnection("Data Source=(local);Initial Catalog=TradeDatabase;Integrated Security=True"))
@@ -34,5 +39,7 @@ namespace TradeProcessor.Repository
                 connection.Close();
             }
         }
+
+        
     }
 }

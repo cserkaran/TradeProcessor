@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TradeProcessor.Infrastructure.Extensibility;
+using TradeProcessor.Interfaces.Extensibility.Extensibility;
+using TradeProcessor.Interfaces.Logging;
 
 namespace TradeProcessor.Infrastructure
 {
@@ -31,6 +31,8 @@ namespace TradeProcessor.Infrastructure
             }
         }
 
+        public ILogger Logger { get; private set; }
+
         /// <summary>
         /// Private constructor for singleton pattern
         /// </summary>
@@ -41,7 +43,10 @@ namespace TradeProcessor.Infrastructure
 
         public void Initialize()
         {
-            //ExtensionRepository.Instance.Load(root);
+            ExtensionRepositoryLoader.Instance.Load();
+            var extensionRepository = ExtensionRepositoryLoader.Instance.GetInnerRepository<ExtensionRepository>();
+            var loggingExtension = extensionRepository.GetExtension<ILoggingExtension>(typeof(ILogger)).FirstOrDefault();
+            Logger = loggingExtension.Logger;
         }
     }
 }

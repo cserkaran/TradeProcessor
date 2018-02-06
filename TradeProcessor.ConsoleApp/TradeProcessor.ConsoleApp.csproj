@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBF8E9FA-B19F-4953-BB17-EA1F5720D3AF}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TradeProcessor.Logger</RootNamespace>
-    <AssemblyName>TradeProcessor.Logger</AssemblyName>
+    <ProjectGuid>{B820A0E6-93AB-48E8-A088-DF2C8404CA18}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TradeProcessor.ConsoleApp</RootNamespace>
+    <AssemblyName>TradeProcessor.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Build\</OutputPath>
@@ -40,13 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logger.cs" />
-    <Compile Include="LoggerExtensionRepository.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TradeProcessor.Infrastructure\TradeProcessor.Infrastructure.csproj">
+      <Project>{d72fe92f-f559-47a0-9ac3-988f31947da6}</Project>
+      <Name>TradeProcessor.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TradeProcessor.Interfaces\TradeProcessor.Interfaces.csproj">
-      <Project>{8B2DA4F0-213D-48EB-B59D-820DDFEA4023}</Project>
+      <Project>{8b2da4f0-213d-48eb-b59d-820ddfea4023}</Project>
       <Name>TradeProcessor.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
