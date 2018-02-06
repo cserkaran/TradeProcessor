@@ -1,4 +1,4 @@
-﻿namespace TradeProcessor.Domain
+﻿namespace TradeProcessor.Domain.Models
 {
     public class TradeRecord
     {

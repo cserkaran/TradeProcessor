@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using TradeProcessor.Domain;
+using TradeProcessor.Domain.Models;
 
 namespace TradeProcessor.Interfaces
 {

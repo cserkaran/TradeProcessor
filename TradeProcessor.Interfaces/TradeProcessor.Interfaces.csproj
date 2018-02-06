@@ -46,6 +46,7 @@
     <Compile Include="Extensibility\IExtensionProvider.cs" />
     <Compile Include="Extensibility\IExtensionRepository.cs" />
     <Compile Include="Extensibility\IExtensionMetadata.cs" />
+    <Compile Include="Extensibility\ITradeLineRulesExtension.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IDbRepository.cs" />
     <Compile Include="ITradeRepository.cs" />

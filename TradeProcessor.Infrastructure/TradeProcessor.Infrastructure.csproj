@@ -50,6 +50,10 @@
     <Compile Include="SafeDirectoryCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TradeProcessor.Domain\TradeProcessor.Domain.csproj">
+      <Project>{0AAB04E2-54D6-474E-AC3E-472CA920C139}</Project>
+      <Name>TradeProcessor.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TradeProcessor.Interfaces\TradeProcessor.Interfaces.csproj">
       <Project>{8B2DA4F0-213D-48EB-B59D-820DDFEA4023}</Project>
       <Name>TradeProcessor.Interfaces</Name>

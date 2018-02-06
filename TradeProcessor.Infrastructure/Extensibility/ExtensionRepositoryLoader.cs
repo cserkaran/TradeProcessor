@@ -52,19 +52,14 @@ namespace TradeProcessor.Infrastructure
                 return;
             }
 
-            try
-            {
-                var catalog = CatalogProvider.DirectoryCatalog;
-                var container = new CompositionContainer(catalog);
-                container.ComposeParts(this);
-                isLoaded = true;
-                ProcessImports();
-                container.Dispose();
-            }
-            catch (Exception ex)
-            {
-                
-            }
+
+            var catalog = CatalogProvider.DirectoryCatalog;
+            var container = new CompositionContainer(catalog);
+            container.ComposeParts(this);
+            isLoaded = true;
+            ProcessImports();
+            container.Dispose();
+
         }
 
         /// <summary>

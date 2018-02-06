@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using TradeProcessor.Domain;
+using TradeProcessor.Domain.Models;
 using TradeProcessor.Interfaces;
 
 namespace TradeProcessor.Repository
