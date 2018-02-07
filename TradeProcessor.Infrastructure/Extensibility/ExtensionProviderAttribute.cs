@@ -4,11 +4,15 @@ using TradeProcessor.Interfaces.Extensibility;
 
 namespace TradeProcessor.Infrastructure.Extensibility
 {
+    /// <summary>
+    /// Custom ExportAttribute implementation used by extensions to provide metadata apart from MEF Export definition.
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.Composition.ExportAttribute" />
+    /// <seealso cref="TradeProcessor.Interfaces.Extensibility.IExtensionMetadata" />
     [MetadataAttribute]
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public class ExtensionProviderAttribute : ExportAttribute, IExtensionMetadata
     {
-
         /// <summary>
         /// Constructor
         /// </summary>

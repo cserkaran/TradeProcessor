@@ -7,19 +7,39 @@ using TradeProcessor.Interfaces;
 
 namespace TradeProcessor.Bll
 {
+    /// <summary>
+    /// Application Controller part of Business Logic Layer.
+    /// Processes the stream and creates the trades in database.
+    /// </summary>
     public class AppController
     {
+        /// <summary>
+        /// The lot size
+        /// </summary>
         private static float LotSize = 100000f;
+
+        /// <summary>
+        /// The initializer <see cref="IServiceHubInitializer"/> to initialize Service Hub.
+        /// </summary>
         private IServiceHubInitializer _initializer;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppController"/> class.
+        /// </summary>
+        /// <param name="initializer">The initializer.</param>
         public AppController(IServiceHubInitializer initializer)
         {
             _initializer = initializer;
+            PlatformServiceHub.Instance.Initialize(_initializer);
         }
 
+        /// <summary>
+        /// Processes the stream for creating trades.
+        /// </summary>
+        /// <param name="stream">The stream.</param>
         public void ProcessTrades(Stream stream)
         {
-            PlatformServiceHub.Instance.Initialize(_initializer);
+            
             var lines = new List<string>();
 
             using (var reader = new StreamReader(stream))
@@ -66,6 +86,11 @@ namespace TradeProcessor.Bll
             }
         }
 
+        /// <summary>
+        /// Extracts the trade record from the line fields of the stream.
+        /// </summary>
+        /// <param name="fields">The fields.</param>
+        /// <returns><see cref="TradeRecord"/>the record object.</returns>
         private static TradeRecord ExtractTradeRecord(string[] fields)
         {
             var sourceCurrencyCode = fields[0].Substring(0, 3);

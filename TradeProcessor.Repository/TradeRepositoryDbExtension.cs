@@ -8,6 +8,10 @@ using TradeProcessor.Interfaces.Extensibility;
 
 namespace TradeProcessor.Repository
 {
+    /// <summary>
+    /// Extension to provide TradeRepository instance.
+    /// </summary>
+    /// <seealso cref="TradeProcessor.Interfaces.Extensibility.IDbRepositoryExtension" />
     public class TradeRepositoryDbExtension : IDbRepositoryExtension
     {
         public IList<IDbRepository> DbRepositories()

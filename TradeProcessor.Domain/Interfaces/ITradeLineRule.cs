@@ -3,7 +3,7 @@
     public interface ITradeLineRule
     {
         /// <summary>
-        /// Evaluates the validity of a rule given an instance of an entity
+        /// Evaluates the validity of a rule.
         /// </summary>
        
         bool Validate(string[] lineFields,int lineNumber);

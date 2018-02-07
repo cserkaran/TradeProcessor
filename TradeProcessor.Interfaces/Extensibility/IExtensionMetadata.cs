@@ -2,6 +2,9 @@
 
 namespace TradeProcessor.Interfaces.Extensibility
 {
+    /// <summary>
+    /// Metadata of the extension.
+    /// </summary>
     public interface IExtensionMetadata
     {
         /// <summary>

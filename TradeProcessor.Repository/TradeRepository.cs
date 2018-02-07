@@ -7,6 +7,10 @@ using TradeProcessor.Interfaces;
 
 namespace TradeProcessor.Repository
 {
+    /// <summary>
+    /// Repository for CRUD operations with TradeRecord.
+    /// </summary>
+    /// <seealso cref="TradeProcessor.Interfaces.ITradeRepository" />
     public class TradeRepository : ITradeRepository
     {
         public void Initialize()
@@ -14,6 +18,10 @@ namespace TradeProcessor.Repository
             // Initiliaze repository here.. e.g create DB Pool etc..;
         }
 
+        /// <summary>
+        /// Creates the trade records.
+        /// </summary>
+        /// <param name="trades">The trades.</param>
         public void CreateTradeRecords(IEnumerable<TradeRecord> trades)
         {
             using (var connection = new SqlConnection("Data Source=(local);Initial Catalog=TradeDatabase;Integrated Security=True"))

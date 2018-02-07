@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TradeProcessor.Interfaces
+﻿namespace TradeProcessor.Interfaces
 {
+    /// <summary>
+    /// Interface to be implemented by Database Repositories.
+    /// </summary>
     public interface IDbRepository
     {
+        /// <summary>
+        /// Initializes this instance.
+        /// </summary>
         void Initialize();
     }
 }

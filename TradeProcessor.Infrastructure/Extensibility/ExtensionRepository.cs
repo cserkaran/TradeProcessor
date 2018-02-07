@@ -6,6 +6,10 @@ using TradeProcessor.Interfaces.Extensibility;
 
 namespace TradeProcessor.Infrastructure.Extensibility
 {
+    /// <summary>
+    /// Repository of extensions loaded by the platform.
+    /// </summary>
+    /// <seealso cref="TradeProcessor.Interfaces.Extensibility.IExtensionRepository" />
     [Export(typeof(IExtensionRepository))]
     public sealed class ExtensionRepository : IExtensionRepository
     {

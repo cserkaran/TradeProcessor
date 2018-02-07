@@ -32,10 +32,28 @@ namespace TradeProcessor.Infrastructure
             }
         }
 
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>
+        /// The logger.
+        /// </value>
         public ILogger Logger { get; private set; }
 
+        /// <summary>
+        /// Gets the TradeRepository for CRUD operations with TradeRecord.
+        /// </summary>
+        /// <value>
+        /// The trade repository.
+        /// </value>
         public ITradeRepository TradeRepository { get; private set; }
 
+        /// <summary>
+        /// Gets the rules to be satisfied to create a valid TradeRecord.
+        /// </summary>
+        /// <value>
+        /// The trade line rules.
+        /// </value>
         public IList<ITradeLineRule> TradeLineRules { get; private set; }
 
         /// <summary>
@@ -46,6 +64,10 @@ namespace TradeProcessor.Infrastructure
             TradeLineRules = new List<ITradeLineRule>();
         }
 
+        /// <summary>
+        /// Initializes the hub.
+        /// </summary>
+        /// <param name="initializer">The initializer.</param>
         public void Initialize(IServiceHubInitializer initializer)
         {
             Logger = initializer.InitLogger();

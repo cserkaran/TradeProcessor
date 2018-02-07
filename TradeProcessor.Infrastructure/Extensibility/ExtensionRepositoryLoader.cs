@@ -7,6 +7,9 @@ using TradeProcessor.Interfaces.Extensibility;
 
 namespace TradeProcessor.Infrastructure
 {
+    /// <summary>
+    /// Load of <see cref="IExtensionRepository"/> extensions
+    /// </summary>
     public class ExtensionRepositoryLoader
     {
         private static readonly Lazy<ExtensionRepositoryLoader> LazyInstance =

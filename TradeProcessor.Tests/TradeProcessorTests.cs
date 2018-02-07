@@ -6,7 +6,6 @@ using System.Reflection;
 using TradeProcessor.Bll;
 using TradeProcessor.Domain.Interfaces;
 using TradeProcessor.Domain.Models;
-using TradeProcessor.Infrastructure;
 using TradeProcessor.Interfaces;
 using TradeProcessor.Interfaces.Logging;
 using TradeProcessor.Rules;

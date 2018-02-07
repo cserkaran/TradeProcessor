@@ -1,5 +1,8 @@
 ﻿namespace TradeProcessor.Interfaces.Extensibility
 {
+    /// <summary>
+    /// Provide a new Extension instance everytime when requested.
+    /// </summary>
     public interface IExtensionProvider
     {
         /// <summary>

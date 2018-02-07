@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TradeProcessor.Interfaces.Extensibility
 {
+    /// <summary>
+    /// Empty interface to inject any type of extensions.
+    /// </summary>
     public interface IExtension
     {
     }
