@@ -7,7 +7,7 @@ using TradeProcessor.Domain.Interfaces;
 
 namespace TradeProcessor.Rules
 {
-    internal class LineMalformedRule : ITradeLineRule
+    public class LineMalformedRule : ITradeLineRule
     {
         public string ValidationMessage { get; private set; }
 

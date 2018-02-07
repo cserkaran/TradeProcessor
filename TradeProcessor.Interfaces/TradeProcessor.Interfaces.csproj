@@ -49,6 +49,7 @@
     <Compile Include="Extensibility\ITradeLineRulesExtension.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IDbRepository.cs" />
+    <Compile Include="IServiceHubInitiallizer.cs" />
     <Compile Include="ITradeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

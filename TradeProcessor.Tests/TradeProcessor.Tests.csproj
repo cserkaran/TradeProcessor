@@ -79,6 +79,33 @@
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="inputA.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TradeProcessor.Bll\TradeProcessor.Bll.csproj">
+      <Project>{1514FC0A-D28D-490A-A77D-8EE1A57DF90C}</Project>
+      <Name>TradeProcessor.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeProcessor.Domain\TradeProcessor.Domain.csproj">
+      <Project>{0AAB04E2-54D6-474E-AC3E-472CA920C139}</Project>
+      <Name>TradeProcessor.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeProcessor.Infrastructure\TradeProcessor.Infrastructure.csproj">
+      <Project>{D72FE92F-F559-47A0-9AC3-988F31947DA6}</Project>
+      <Name>TradeProcessor.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeProcessor.Interfaces\TradeProcessor.Interfaces.csproj">
+      <Project>{8B2DA4F0-213D-48EB-B59D-820DDFEA4023}</Project>
+      <Name>TradeProcessor.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradeProcessor.Rules\TradeProcessor.Rules.csproj">
+      <Project>{E29099AB-D306-47ED-9DF9-21361CA08016}</Project>
+      <Name>TradeProcessor.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TradeProcessor.Infrastructure;
+﻿using TradeProcessor.Infrastructure;
 
 namespace TradeProcessor.ConsoleApp
 {
@@ -11,7 +6,7 @@ namespace TradeProcessor.ConsoleApp
     {
         static void Main(string[] args)
         {
-            PlatformServiceHub.Instance.Initialize();
+            PlatformServiceHub.Instance.Initialize(new ServiceHubInitializer());
         }
     }
 }

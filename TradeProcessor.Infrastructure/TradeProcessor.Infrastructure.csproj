@@ -48,6 +48,7 @@
     <Compile Include="PlatformServiceHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SafeDirectoryCatalog.cs" />
+    <Compile Include="ServiceHubInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TradeProcessor.Domain\TradeProcessor.Domain.csproj">

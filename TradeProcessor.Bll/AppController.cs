@@ -3,16 +3,23 @@ using System.Diagnostics;
 using System.IO;
 using TradeProcessor.Domain.Models;
 using TradeProcessor.Infrastructure;
+using TradeProcessor.Interfaces;
 
 namespace TradeProcessor.Bll
 {
     public class AppController
     {
         private static float LotSize = 100000f;
+        private IServiceHubInitializer _initializer;
+
+        public AppController(IServiceHubInitializer initializer)
+        {
+            _initializer = initializer;
+        }
 
         public void ProcessTrades(Stream stream)
         {
-            PlatformServiceHub.Instance.Initialize();
+            PlatformServiceHub.Instance.Initialize(_initializer);
             var lines = new List<string>();
 
             using (var reader = new StreamReader(stream))
@@ -28,7 +35,7 @@ namespace TradeProcessor.Bll
             var lineCount = 1;
 
             var rules = PlatformServiceHub.Instance.TradeLineRules;
-
+            bool allRulesPassed = true;
             foreach (var line in lines)
             {
                 var fields = line.Split(new char[] { ',' });
@@ -38,15 +45,21 @@ namespace TradeProcessor.Bll
                     if (!rule.Validate(fields, lineCount))
                     {
                         PlatformServiceHub.Instance.Logger.Log(EventLogEntryType.Warning, rule.ValidationMessage);
-                        continue;
+                        allRulesPassed = false;
+                        break;
                     }
-
-                    TradeRecord trade = ExtractTradeRecord(fields);
-
-                    trades.Add(trade);
-
-                    lineCount++;
                 }
+
+                if (!allRulesPassed)
+                {
+                    return;
+                }
+
+                TradeRecord trade = ExtractTradeRecord(fields);
+
+                trades.Add(trade);
+
+                lineCount++;
 
                 PlatformServiceHub.Instance.TradeRepository.CreateTradeRecords(trades);
                 PlatformServiceHub.Instance.Logger.Log(EventLogEntryType.Information, $"INFO: {trades.Count} trades processed");
