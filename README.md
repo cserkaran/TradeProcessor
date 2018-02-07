@@ -1,7 +1,6 @@
 # TradeProcessor
 A simple app to process trade objects in text stream and create them in the database.
-
-#Summary
+# Summary
 The idea is to split into mutliple layers to distribute the logic. The layers are : 
 - Infrastrucure Layer
 - Business Logic Layer
